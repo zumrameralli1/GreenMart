@@ -20,33 +20,33 @@
         <div class="nav-container">
             <a href="index.html" class="logo">GreenMart</a>
             <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="shop.html">Mağaza</a></li>
-                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <div class="nav-icons">
                 <a href="#" id="weather-widget" class="weather-widget-link">
                     <span id="weather-icon">☀️</span> <span id="weather-temp">--°C</span>
                 </a>
                 <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
-                <a href="login.html" class="user-icon">👤 Giriş Yap</a>
+                <a href="login.html" class="user-icon">Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Shop Section -->
     <div class="container">
-        <h2 class="section-title">Mağaza Ürünleri</h2>
+        <h2 class="section-title">Shop Products</h2>
 
         <div class="search-box mb-2">
-            <input type="text" id="search-input" placeholder="Ürün ara..." onkeyup="filterProducts()">
+            <input type="text" id="search-input" placeholder="Search for products..." onkeyup="filterProducts()">
             <select id="category-filter" onchange="filterProducts()">
-                <option value="all">Tüm Kategoriler</option>
-                <option value="Bitki">Bitki</option>
-                <option value="Dekor">Dekor</option>
-                <option value="Mobilya">Mobilya</option>
-                <option value="Aksesuar">Aksesuar</option>
-                <option value="Bakım">Bakım</option>
+                <option value="all">All Categories</option>
+                <option value="Bitki">Plant</option>
+                <option value="Dekor">Decor</option>
+                <option value="Mobilya">Furniture</option>
+                <option value="Aksesuar">Accessory</option>
+                <option value="Bakım">Care</option>
             </select>
         </div>
 
@@ -58,14 +58,14 @@
                 <a href="product-detail.html?id=1" class="product-card-link">
                     <div class="product-image"><img src="monstera.png"></div>
                     <div class="product-info">
-                        <div class="product-category">Bitki</div>
+                        <div class="product-category">Plant</div>
                         <h3 class="product-title">Monstera Deliciosa</h3>
                         <div class="product-price">450.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Monstera Deliciosa" data-price="450">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Monstera Deliciosa" data-price="450">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -74,14 +74,14 @@
                 <a href="product-detail.html?id=2" class="product-card-link">
                     <div class="product-image"><img src="vazoel.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Dekor</div>
-                        <h3 class="product-title">El Yapımı Seramik Vazo</h3>
+                        <div class="product-category">Decor</div>
+                        <h3 class="product-title">Handmade Ceramic Vase</h3>
                         <div class="product-price">320.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Seramik Vazo" data-price="320">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Ceramic Vase" data-price="320">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -90,14 +90,14 @@
                 <a href="product-detail.html?id=3" class="product-card-link">
                     <div class="product-image"><img src="sehpa.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Mobilya</div>
-                        <h3 class="product-title">Ahşap Yan Sehpa</h3>
+                        <div class="product-category">Furniture</div>
+                        <h3 class="product-title">Wooden Side Table</h3>
                         <div class="product-price">850.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Ahşap Sehpa" data-price="850">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Wooden Table" data-price="850">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -106,13 +106,13 @@
                 <a href="product-detail.html?id=4" class="product-card-link">
                     <div class="product-image"><img src="soya-mumu.png"></div>
                     <div class="product-info">
-                        <div class="product-category">Aksesuar</div>
-                        <h3 class="product-title">Doğal Soya Mumu</h3>
+                        <div class="product-category">Accessory</div>
+                        <h3 class="product-title">Natural Soy Wax</h3>
                         <div class="product-price">120.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Soya Mumu" data-price="120">Sepete Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Soy Wax" data-price="120">Add to Cart</button>
                 </div>
             </div>
 
@@ -121,14 +121,14 @@
                 <a href="product-detail.html?id=5" class="product-card-link">
                     <div class="product-image"><img src="kaktüs.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Bitki</div>
-                        <h3 class="product-title">Mini Kaktüs Seti</h3>
+                        <div class="product-category">Plant</div>
+                        <h3 class="product-title">Mini Cactus Set</h3>
                         <div class="product-price">180.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Mini Kaktüs Seti" data-price="180">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Mini Cactus Set" data-price="180">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -137,14 +137,14 @@
                 <a href="product-detail.html?id=6" class="product-card-link">
                     <div class="product-image"><img src="tablo.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Dekor</div>
-                        <h3 class="product-title">Botanik Duvar Tablosu</h3>
+                        <div class="product-category">Decor</div>
+                        <h3 class="product-title">Botanical Wall Painting</h3>
                         <div class="product-price">250.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Duvar Tablosu" data-price="250">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Wall Painting" data-price="250">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -153,14 +153,14 @@
                 <a href="product-detail.html?id=7" class="product-card-link">
                     <div class="product-image"><img src="sepet.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Aksesuar</div>
-                        <h3 class="product-title">Hasır Sepet</h3>
+                        <div class="product-category">Accessory</div>
+                        <h3 class="product-title">Wicker Basket</h3>
                         <div class="product-price">150.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Hasır Sepet" data-price="150">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Wicker Basket" data-price="150">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -169,13 +169,13 @@
                 <a href="product-detail.html?id=8" class="product-card-link">
                     <div class="product-image"><img src="bambu.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Aksesuar</div>
-                        <h3 class="product-title">Bambu Mutfak Seti</h3>
+                        <div class="product-category">Accessory</div>
+                        <h3 class="product-title">Bamboo Kitchen Set</h3>
                         <div class="product-price">400.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Bambu Set" data-price="400">Sepete Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Bamboo Set" data-price="400">Add to Cart</button>
                 </div>
             </div>
 
@@ -184,14 +184,14 @@
                 <a href="product-detail.html?id=9" class="product-card-link">
                     <div class="product-image"><img src="fener.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Dekor</div>
-                        <h3 class="product-title">Japon Feneri</h3>
+                        <div class="product-category">Decor</div>
+                        <h3 class="product-title">Japanese Lantern</h3>
                         <div class="product-price">280.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Japon Feneri" data-price="280">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Japanese Lantern" data-price="280">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -200,14 +200,14 @@
                 <a href="product-detail.html?id=10" class="product-card-link">
                     <div class="product-image"><img src="süs.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Aksesuar</div>
-                        <h3 class="product-title">Makrome Duvar Süsü</h3>
+                        <div class="product-category">Accessory</div>
+                        <h3 class="product-title">Macrame Wall Hanging</h3>
                         <div class="product-price">220.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Makrome Süs" data-price="220">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Macrame Ornament" data-price="220">Add to
+                        Cart</button>
                 </div>
             </div>
 
@@ -216,13 +216,13 @@
                 <a href="product-detail.html?id=11" class="product-card-link">
                     <div class="product-image"><img src="lavanta.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Bakım</div>
-                        <h3 class="product-title">Doğal Lavanta Sabunu</h3>
+                        <div class="product-category">Care</div>
+                        <h3 class="product-title">Natural Lavender Soap</h3>
                         <div class="product-price">80.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Doğal Sabun" data-price="80">Sepete Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Natural Soap" data-price="80">Add to Cart</button>
                 </div>
             </div>
 
@@ -231,14 +231,14 @@
                 <a href="product-detail.html?id=12" class="product-card-link">
                     <div class="product-image"><img src="bambusüs.jpg"></div>
                     <div class="product-info">
-                        <div class="product-category">Bitki</div>
-                        <h3 class="product-title">Bambu Dekoru</h3>
+                        <div class="product-category">Plant</div>
+                        <h3 class="product-title">Bamboo Decor</h3>
                         <div class="product-price">150.00 TL</div>
                     </div>
                 </a>
                 <div class="product-info">
-                    <button class="btn btn-outline add-btn" data-name="Bambu Dekoru" data-price="150">Sepete
-                        Ekle</button>
+                    <button class="btn btn-outline add-btn" data-name="Bamboo Decor" data-price="150">Add to
+                        Cart</button>
                 </div>
             </div>
         </div>
@@ -247,7 +247,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2024 GreenMart. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 GreenMart. All rights reserved.</p>
         </div>
     </footer>
 
@@ -263,5 +263,6 @@
         };
     </script>
 </body>
+
 
 </html>
