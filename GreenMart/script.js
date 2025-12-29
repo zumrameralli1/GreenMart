@@ -36,14 +36,14 @@ const productsData = [
     { id: 2, name: "Handmade Ceramic Vase", price: "320.00", category: "Decor", image: "vazoel.jpg", desc: "A ceramic vase, entirely handcrafted, with a modern and minimalist design. An elegant way to present your flowers." },
     { id: 3, name: "Wooden Side Table", price: "850.00", category: "Furniture", image: "sehpa.jpg", desc: "A durable and aesthetically pleasing side table made from natural wood. It adds a warm touch to your living room." },
     { id: 4, name: "Natural Soy Wax", price: "120.00", category: "Accessory", image: "soya-mumu.png", desc: "Made using 100% natural soy wax. It has a long burn time and a relaxing natural scent." },
-    { id: 5, name: "Mini Cactus Set", price: "180.00", category: "Plant", image: "kaktüs.jpg", desc: "A decorative set of three mini cacti that are easy to care for. The perfect green corner for your desk." },
+    { id: 5, name: "Mini Cactus Set", price: "180.00", category: "Plant", image: "kaktus.jpg", desc: "A decorative set of three mini cacti that are easy to care for. The perfect green corner for your desk." },
     { id: 6, name: "Botanical Wall Painting", price: "250.00", category: "Decor", image: "tablo.jpg", desc: "An elegant wall art piece in a wooden frame, inspired by vintage botanical illustrations." },
     { id: 7, name: "Wicker Basket", price: "150.00", category: "Accessory", image: "sepet.jpg", desc: "A durable storage basket made from natural wicker, ideal for multi-purpose use." },
     { id: 8, name: "Bamboo Kitchen Set", price: "400.00", category: "Accessory", image: "bambu.jpg", desc: "A healthy and durable kitchen utensil set made from sustainably sourced bamboo." },
     { id: 9, name: "Japanese Lantern", price: "280.00", category: "Decor", image: "fener.jpg", desc: "An oriental touch for your garden or balcony. Traditional Japanese lantern design." },
-    { id: 10, name: "Macrame Wall Hanging", price: "220.00", category: "Accessory", image: "süs.jpg", desc: "Hand-knitted bohemian-style macrame wall hanging. Adds a natural touch to your walls." },
+    { id: 10, name: "Macrame Wall Hanging", price: "220.00", category: "Accessory", image: "sus.jpg", desc: "Hand-knitted bohemian-style macrame wall hanging. Adds a natural touch to your walls." },
     { id: 11, name: "Natural Lavender Soap", price: "80.00", category: "Care", image: "lavanta.jpg", desc: "A natural soap enriched with real lavender extracts, gently cleansing the skin" },
-    { id: 12, name: "Bamboo Decor", price: "150.00", category: "Plant", image: "bambusüs.jpg", desc: "An easy-to-care-for and stylish bamboo plant arrangement believed to bring good luck." }
+    { id: 12, name: "Bamboo Decor", price: "150.00", category: "Plant", image: "bambusus.jpg", desc: "An easy-to-care-for and stylish bamboo plant arrangement believed to bring good luck." }
 ];
 
 function loadProductDetails() {
@@ -278,3 +278,4 @@ function loginWithGoogle() {
         });
 
 }
+
