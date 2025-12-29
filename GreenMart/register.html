@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenMart - Kayıt Ol</title>
+    <title>GreenMart - Register</title>
     <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
@@ -15,21 +15,21 @@
 
 <body>
 
-    <!-- Navbar -->
+    
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">GreenMart</a>
             <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="shop.html">Mağaza</a></li>
-                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <div class="nav-icons">
                 <a href="#" id="weather-widget" class="weather-widget-link">
                     <span id="weather-icon">☀️</span> <span id="weather-temp">--°C</span>
                 </a>
                 <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
-                <a href="login.html" class="user-icon">👤 Giriş Yap</a>
+                <a href="login.html" class="user-icon">Login</a>
             </div>
         </div>
     </nav>
@@ -37,22 +37,22 @@
     <!-- Register Section -->
     <div class="container auth-container">
         <div class="login-box auth-box">
-            <h2 class="text-primary mb-2">Kayıt Ol</h2>
-            <input type="text" id="name-input" placeholder="Ad Soyad" class="mb-1">
-            <input type="email" id="register-email-input" placeholder="E-posta" class="mb-1">
-            <input type="password" id="register-password-input" placeholder="Şifre" class="mb-1">
-            <input type="password" id="confirm-password-input" placeholder="Şifre Tekrar" class="mb-1-5">
-            <button class="btn btn-primary w-100" onclick="register()">Kayıt Ol</button>
+            <h2 class="text-primary mb-2">Register</h2>
+            <input type="text" id="name-input" placeholder="Name Surname" class="mb-1">
+            <input type="email" id="register-email-input" placeholder="E-mail" class="mb-1">
+            <input type="password" id="register-password-input" placeholder="Password" class="mb-1">
+            <input type="password" id="confirm-password-input" placeholder="Password Again" class="mb-1-5">
+            <button class="btn btn-primary w-100" onclick="register()">Register</button>
             <p class="mt-2 font-weight-600 font-sm">
-                Zaten hesabın var mı? <a href="login.html" class="text-primary">Giriş yap</a>
+                Do you already have an account? <a href="login.html" class="text-primary">Login</a>
             </p>
         </div>
     </div>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2024 GreenMart. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 GreenMart. All rights reserved.</p>
         </div>
     </footer>
 
@@ -65,5 +65,6 @@
         };
     </script>
 </body>
+
 
 </html>
