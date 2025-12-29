@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenMart - Sepet</title>
+    <title>GreenMart - Cart</title>
     <link rel="stylesheet" href="styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
@@ -20,44 +20,44 @@
         <div class="nav-container">
             <a href="index.html" class="logo">GreenMart</a>
             <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="shop.html">Mağaza</a></li>
-                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <div class="nav-icons">
                 <a href="#" id="weather-widget" class="weather-widget-link">
                     <span id="weather-icon">☀️</span> <span id="weather-temp">--°C</span>
                 </a>
                 <a href="cart.html" class="cart-icon active">🛒 <span id="cart-count">0</span></a>
-                <a href="login.html" class="user-icon">👤 Giriş Yap</a>
+                <a href="login.html" class="user-icon">Login</a>
             </div>
         </div>
     </nav>
 
-    <!-- Cart Section -->
+    
     <div class="container">
-        <h2>Sepetim</h2>
+        <h2>My Cart</h2>
         <div id="cart-items" class="cart-container">
-            <!-- Items will be injected here -->
-            <p>Sepetiniz boş.</p>
+            
+            <p>Your cart is empty.</p>
         </div>
         <div class="cart-total">
-            <h3>Toplam: <span id="total-price">0.00</span> TL</h3>
-            <button id="checkout-btn" class="btn btn-primary mt-1">Siparişi Tamamla</button>
+            <h3>Total: <span id="total-price">0.00</span> TL</h3>
+            <button id="checkout-btn" class="btn btn-primary mt-1">Complete the Order</button>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2024 GreenMart. Tüm hakları saklıdır.</p>
+            <p>&copy; 2026 GreenMart. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
     <script>
         window.onload = function () {
-            // Basic count update check
+            
             if (typeof updateCartCount === 'function') {
                 updateCartCount();
             }
@@ -66,14 +66,14 @@
             const cart = JSON.parse(localStorage.getItem('cartGreen')) || [];
 
             if (cart.length > 0) {
-                cartItems.innerHTML = ''; // Clear empty message
+                cartItems.innerHTML = ''; 
                 let total = 0;
 
                 cart.forEach((item, index) => {
                     const div = document.createElement('div');
                     div.className = 'cart-item';
 
-                    // Use item.image if available. If it's a path/URL use img tag, else use as text (fallback)
+                    
                     let imgDisplay;
                     if (item.image && (item.image.includes('/') || item.image.includes('http') || item.image.includes('.'))) {
                         imgDisplay = `<img src="${item.image}" alt="${item.name}" class="cart-item-img">`;
@@ -110,5 +110,6 @@
     </script>
 
 </body>
+
 
 </html>
