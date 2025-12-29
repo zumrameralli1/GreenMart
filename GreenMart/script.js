@@ -32,18 +32,18 @@ function updateCartCount() {
 
 // Product Database (With Images)
 const productsData = [
-    { id: 1, name: "Monstera Deliciosa", price: "450.00", category: "Bitki", image: "monstera.png", desc: "Evinize tropikal bir hava katacak, bakımı kolay ve gösterişli devetabanı bitkisi. Yaprakları delikli yapısıyla dikkat çeker." },
-    { id: 2, name: "El Yapımı Seramik Vazo", price: "320.00", category: "Dekor", image: "vazoel.jpg", desc: "Tamamen el işçiliği ile üretilmiş, modern ve minimalist tasarıma sahip seramik vazo. Çiçekleriniz için şık bir sunum." },
-    { id: 3, name: "Ahşap Yan Sehpa", price: "850.00", category: "Mobilya", image: "sehpa.jpg", desc: "Doğal ahşaptan üretilmiş, dayanıklı ve estetik yan sehpa. Salonunuza sıcak bir dokunuş katar." },
-    { id: 4, name: "Doğal Soya Mumu", price: "120.00", category: "Aksesuar", image: "soya-mumu.png", desc: "%100 doğal soya wax kullanılarak üretilmiştir. Uzun yanma süresi ve rahatlatıcı doğal kokuya sahiptir." },
-    { id: 5, name: "Mini Kaktüs Seti", price: "180.00", category: "Bitki", image: "kaktüs.jpg", desc: "Bakımı zahmetsiz, dekoratif üçlü mini kaktüs seti. Çalışma masanız için ideal bir yeşil köşe." },
-    { id: 6, name: "Botanik Duvar Tablosu", price: "250.00", category: "Dekor", image: "tablo.jpg", desc: "Vintage botanik çizimlerinden esinlenilmiş, ahşap çerçeveli şık duvar tablosu." },
-    { id: 7, name: "Hasır Sepet", price: "150.00", category: "Aksesuar", image: "sepet.jpg", desc: "Çok amaçlı kullanım için ideal, doğal hasırdan örülmüş, dayanıklı saklama sepeti." },
-    { id: 8, name: "Bambu Mutfak Seti", price: "400.00", category: "Aksesuar", image: "bambu.jpg", desc: "Sürdürülebilir bambudan üretilmiş, sağlıklı ve uzun ömürlü mutfak gereçleri seti." },
-    { id: 9, name: "Japon Feneri", price: "280.00", category: "Dekor", image: "fener.jpg", desc: "Bahçeniz veya balkonunuz için oryantal bir dokunuş. Geleneksel Japon feneri tasarımı." },
-    { id: 10, name: "Makrome Duvar Süsü", price: "220.00", category: "Aksesuar", image: "süs.jpg", desc: "El örgüsü bohem tarzı makrome duvar süsü. Duvarlarınıza doğal bir doku katar." },
-    { id: 11, name: "Doğal Lavanta Sabunu", price: "80.00", category: "Bakım", image: "lavanta.jpg", desc: "Gerçek lavanta özleri ile zenginleştirilmiş, cildi nazikçe temizleyen doğal sabun." },
-    { id: 12, name: "Bambu Dekoru", price: "150.00", category: "Bitki", image: "bambusüs.jpg", desc: "Şans getirdiğine inanılan, bakımı kolay ve şık bambu bitkisi aranjmanı." }
+    { id: 1, name: "Monstera Deliciosa", price: "450.00", category: "Plant", image: "monstera.png", desc: "The easy-to-care-for and showy elephant's foot plant will add a tropical touch to your home. Its leaves are notable for their perforated structure." },
+    { id: 2, name: "Handmade Ceramic Vase", price: "320.00", category: "Decor", image: "vazoel.jpg", desc: "A ceramic vase, entirely handcrafted, with a modern and minimalist design. An elegant way to present your flowers." },
+    { id: 3, name: "Wooden Side Table", price: "850.00", category: "Furniture", image: "sehpa.jpg", desc: "A durable and aesthetically pleasing side table made from natural wood. It adds a warm touch to your living room." },
+    { id: 4, name: "Natural Soy Wax", price: "120.00", category: "Accessory", image: "soya-mumu.png", desc: "Made using 100% natural soy wax. It has a long burn time and a relaxing natural scent." },
+    { id: 5, name: "Mini Cactus Set", price: "180.00", category: "Plant", image: "kaktüs.jpg", desc: "A decorative set of three mini cacti that are easy to care for. The perfect green corner for your desk." },
+    { id: 6, name: "Botanical Wall Painting", price: "250.00", category: "Decor", image: "tablo.jpg", desc: "An elegant wall art piece in a wooden frame, inspired by vintage botanical illustrations." },
+    { id: 7, name: "Wicker Basket", price: "150.00", category: "Accessory", image: "sepet.jpg", desc: "A durable storage basket made from natural wicker, ideal for multi-purpose use." },
+    { id: 8, name: "Bamboo Kitchen Set", price: "400.00", category: "Accessory", image: "bambu.jpg", desc: "A healthy and durable kitchen utensil set made from sustainably sourced bamboo." },
+    { id: 9, name: "Japanese Lantern", price: "280.00", category: "Decor", image: "fener.jpg", desc: "An oriental touch for your garden or balcony. Traditional Japanese lantern design." },
+    { id: 10, name: "Macrame Wall Hanging", price: "220.00", category: "Accessory", image: "süs.jpg", desc: "Hand-knitted bohemian-style macrame wall hanging. Adds a natural touch to your walls." },
+    { id: 11, name: "Natural Lavender Soap", price: "80.00", category: "Care", image: "lavanta.jpg", desc: "A natural soap enriched with real lavender extracts, gently cleansing the skin" },
+    { id: 12, name: "Bamboo Decor", price: "150.00", category: "Plant", image: "bambusüs.jpg", desc: "An easy-to-care-for and stylish bamboo plant arrangement believed to bring good luck." }
 ];
 
 function loadProductDetails() {
@@ -67,7 +67,7 @@ function loadProductDetails() {
         btn.onclick = () => addToCart(product.name, product.price, product.image);
     } else {
         const container = document.getElementById('product-detail');
-        if (container) container.innerHTML = "<h2>Ürün bulunamadı.</h2><a href='shop.html'>Mağazaya Dön</a>";
+        if (container) container.innerHTML = "<h2>Product not found.</h2><a href='shop.html'>Return to Store</a>";
     }
 }
 
@@ -75,7 +75,7 @@ function addToCart(productName, price, image) {
     cart.push({ name: productName, price: price, image: image });
     localStorage.setItem('cartGreen', JSON.stringify(cart));
     updateCartCount();
-    alert(productName + " sepete eklendi!");
+    alert(productName + " added to cart!");
 }
 
 function filterProducts() {
@@ -85,11 +85,7 @@ function filterProducts() {
 
     products.forEach(product => {
         const title = product.querySelector('.product-title').textContent.toLowerCase();
-        // Since we didn't change the category text in the HTML product cards yet (oops, we did in shop.html but script.js relies on textContent),
-        // we should make sure the filter logic still works.
-        // In shop.html we updated displayed category text to English (Plant, Decor, etc).
-        // WE NEED TO UPDATE THE FILTER SELECT VALUES IN SHOP.HTML TO MATCH ENGLISH CATEGORIES OR MAP THEM.
-        // Let's assume shop.html select values match what's in the DOM.
+        
 
         const category = product.querySelector('.product-category').textContent;
 
@@ -136,17 +132,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cart.length === 0) {
-                alert("Sepetiniz boş! Lütfen önce ürün ekleyin.");
+                alert("Your cart is empty! Please add products first.");
                 return;
             }
 
-            // Simulate Checkout
-            alert("Siparişiniz başarıyla alındı! Teşekkür ederiz.");
+            
+            alert("Your order has been successfully received! Thank you.");
             cart = [];
             localStorage.setItem('cartGreen', JSON.stringify(cart));
             updateCartCount();
             
-            // Allow alert to close before redirecting (slightly better UX, though alert blocks anyway)
+            
             window.location.href = 'index.html';
         });
     }
@@ -195,7 +191,7 @@ function checkAuth() {
             loginLink.href = "#";
             loginLink.onclick = (e) => {
                 e.preventDefault();
-                if (confirm("Çıkış yapmak istiyor musunuz?")) {
+                if (confirm("Do you want to log out?")) {
                     logout();
                 }
             };
@@ -210,25 +206,25 @@ function register() {
     const confirmPassword = document.getElementById('confirm-password-input').value;
 
     if (!name || !email || !password) {
-        alert("Lütfen tüm alanları doldurun.");
+        alert("Please fill in all fields.");
         return;
     }
 
     if (password !== confirmPassword) {
-        alert("Şifreler eşleşmiyor.");
+        alert("The passwords don't match.");
         return;
     }
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
     if (users.find(u => u.email === email)) {
-        alert("Bu e-posta adresi zaten kayıtlı.");
+        alert("This email address is already registered.");
         return;
     }
 
     users.push({ name, email, password });
     localStorage.setItem('users', JSON.stringify(users));
-    alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+    alert("Registration successful! You can log in.");
     window.location.href = 'login.html';
 }
 
@@ -241,10 +237,10 @@ function login() {
 
     if (user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        alert(`Hoş geldin, ${user.name}!`);
+        alert(`Welcome, ${user.name}!`);
         window.location.href = 'index.html';
     } else {
-        alert("Hatalı e-posta veya şifre.");
+        alert("Incorrect email address or password.");
     }
 }
 
@@ -255,7 +251,7 @@ function logout() {
 
 function loginWithGoogle() {
     if (!auth) {
-        alert("Google girişi şu an kullanılamıyor (Firebase yüklenmedi).");
+        alert("Google login is currently unavailable (Firebase failed to load).");
         return;
     }
 
@@ -264,20 +260,21 @@ function loginWithGoogle() {
             // The signed-in user info.
             const user = result.user;
 
-            // Create a user object that matches what the app expects
+            
             const appUser = {
-                name: user.displayName || user.email.split('@')[0], // Fallback to part of email if name missing
+                name: user.displayName || user.email.split('@')[0], 
                 email: user.email,
                 photo: user.photoURL
             };
 
-            // Save to localStorage as the "logged in" user
+            
             localStorage.setItem('currentUser', JSON.stringify(appUser));
 
-            alert(`Hoş geldin, ${appUser.name}!`);
+            alert(`Welcome, ${appUser.name}!`);
             window.location.href = 'index.html';
         }).catch((error) => {
             console.error(error);
-            alert("Giriş başarısız: " + error.message);
+            alert("Login failed: " + error.message);
         });
+
 }
