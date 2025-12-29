@@ -1,37 +1,24 @@
-
-
 :root {
     /* Color Palette */
     --primary-color: #556B2F;
-    /* Dark Olive Green */
     --secondary-color: #8F9779;
-    /* Sage / Khaki Light */
     --accent-color: #DAA520;
-    /* Goldenrod (Subtle details) */
     --background-color: #FDFCF5;
-    /* Cream / Off-White */
     --surface-color: #F5F5DC;
-    /* Beige */
     --text-color: #2F4F4F;
-    /* Dark Slate Gray */
     --text-light: #6B8E23;
-    /* Olive Drab (Lighter text) */
     --border-color: #D3D3BF;
-    /* Light Khaki Border */
     --white: #FFFFFF;
 
     /* Typography */
     --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
     --font-heading: 'Playfair Display', serif;
-    /* Optional for premium feel */
 
     /* Spacing & Layout */
     --container-width: 1200px;
     --border-radius: 8px;
-    /* Slightly rounded, not too bubbly */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(85, 107, 47, 0.15);
-    /* Tinted shadow */
     --transition: all 0.3s ease;
 }
 
@@ -101,7 +88,6 @@ h6 {
 
 .btn-primary:hover {
     background-color: #3e4f20;
-    /* Darker Olive */
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -203,7 +189,6 @@ nav {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    /* Needed for absolute positioning of weather widget */
 }
 
 .weather-widget {
@@ -275,7 +260,6 @@ nav {
 .product-image {
     height: 250px;
     background-color: #F0F0E8;
-    /* Light greenish grey placeholder */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,7 +305,6 @@ footer {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 2:1 column logic can be applied */
     gap: 3rem;
     margin-bottom: 3rem;
 }
@@ -358,7 +341,6 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        /* Add mobile menu logic later */
     }
 
     .hero h1 {
@@ -664,7 +646,6 @@ footer {
     background: none;
     border: none;
     color: #cc0000;
-    /* Red for delete/remove action */
     cursor: pointer;
     font-size: 0.8rem;
     margin-top: 5px;
