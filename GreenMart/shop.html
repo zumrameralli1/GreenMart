@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenMart - Mağaza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GreenMart</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="shop.html">Mağaza</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#" id="weather-widget" class="weather-widget-link">
+                    <span id="weather-icon">☀️</span> <span id="weather-temp">--°C</span>
+                </a>
+                <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+                <a href="login.html" class="user-icon">👤 Giriş Yap</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Section -->
+    <div class="container">
+        <h2 class="section-title">Mağaza Ürünleri</h2>
+
+        <div class="search-box mb-2">
+            <input type="text" id="search-input" placeholder="Ürün ara..." onkeyup="filterProducts()">
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="all">Tüm Kategoriler</option>
+                <option value="Bitki">Bitki</option>
+                <option value="Dekor">Dekor</option>
+                <option value="Mobilya">Mobilya</option>
+                <option value="Aksesuar">Aksesuar</option>
+                <option value="Bakım">Bakım</option>
+            </select>
+        </div>
+
+        <div class="grid-products" id="all-products">
+            <!-- Products will be populated here by JS if available, or static list below -->
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <a href="product-detail.html?id=1" class="product-card-link">
+                    <div class="product-image"><img src="monstera.png"></div>
+                    <div class="product-info">
+                        <div class="product-category">Bitki</div>
+                        <h3 class="product-title">Monstera Deliciosa</h3>
+                        <div class="product-price">450.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Monstera Deliciosa" data-price="450">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <a href="product-detail.html?id=2" class="product-card-link">
+                    <div class="product-image"><img src="vazoel.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Dekor</div>
+                        <h3 class="product-title">El Yapımı Seramik Vazo</h3>
+                        <div class="product-price">320.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Seramik Vazo" data-price="320">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <a href="product-detail.html?id=3" class="product-card-link">
+                    <div class="product-image"><img src="sehpa.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Mobilya</div>
+                        <h3 class="product-title">Ahşap Yan Sehpa</h3>
+                        <div class="product-price">850.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Ahşap Sehpa" data-price="850">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <a href="product-detail.html?id=4" class="product-card-link">
+                    <div class="product-image"><img src="soya-mumu.png"></div>
+                    <div class="product-info">
+                        <div class="product-category">Aksesuar</div>
+                        <h3 class="product-title">Doğal Soya Mumu</h3>
+                        <div class="product-price">120.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Soya Mumu" data-price="120">Sepete Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 5 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=5" class="product-card-link">
+                    <div class="product-image"><img src="kaktüs.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Bitki</div>
+                        <h3 class="product-title">Mini Kaktüs Seti</h3>
+                        <div class="product-price">180.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Mini Kaktüs Seti" data-price="180">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 6 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=6" class="product-card-link">
+                    <div class="product-image"><img src="tablo.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Dekor</div>
+                        <h3 class="product-title">Botanik Duvar Tablosu</h3>
+                        <div class="product-price">250.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Duvar Tablosu" data-price="250">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 7 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=7" class="product-card-link">
+                    <div class="product-image"><img src="sepet.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Aksesuar</div>
+                        <h3 class="product-title">Hasır Sepet</h3>
+                        <div class="product-price">150.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Hasır Sepet" data-price="150">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 8 (Existing - Bambu Mutfak Seti) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=8" class="product-card-link">
+                    <div class="product-image"><img src="bambu.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Aksesuar</div>
+                        <h3 class="product-title">Bambu Mutfak Seti</h3>
+                        <div class="product-price">400.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Bambu Set" data-price="400">Sepete Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 9 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=9" class="product-card-link">
+                    <div class="product-image"><img src="fener.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Dekor</div>
+                        <h3 class="product-title">Japon Feneri</h3>
+                        <div class="product-price">280.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Japon Feneri" data-price="280">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 10 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=10" class="product-card-link">
+                    <div class="product-image"><img src="süs.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Aksesuar</div>
+                        <h3 class="product-title">Makrome Duvar Süsü</h3>
+                        <div class="product-price">220.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Makrome Süs" data-price="220">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 11 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=11" class="product-card-link">
+                    <div class="product-image"><img src="lavanta.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Bakım</div>
+                        <h3 class="product-title">Doğal Lavanta Sabunu</h3>
+                        <div class="product-price">80.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Doğal Sabun" data-price="80">Sepete Ekle</button>
+                </div>
+            </div>
+
+            <!-- Product 12 (New) -->
+            <div class="product-card">
+                <a href="product-detail.html?id=12" class="product-card-link">
+                    <div class="product-image"><img src="bambusüs.jpg"></div>
+                    <div class="product-info">
+                        <div class="product-category">Bitki</div>
+                        <h3 class="product-title">Bambu Dekoru</h3>
+                        <div class="product-price">150.00 TL</div>
+                    </div>
+                </a>
+                <div class="product-info">
+                    <button class="btn btn-outline add-btn" data-name="Bambu Dekoru" data-price="150">Sepete
+                        Ekle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2024 GreenMart. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Inline script to handle potential missing JS functions gently
+        window.onload = function () {
+            // Re-use logic from original file but wrap in try-catch or check existence
+            if (typeof updateCartCount === 'function') {
+                updateCartCount();
+            }
+        };
+    </script>
+</body>
+
+</html>
